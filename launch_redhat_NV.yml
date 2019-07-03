@@ -1,0 +1,14 @@
+# To launch AWS North  - verginia instance instantly
+# Requires modules: awscli, boto or boto3
+# may get error if launched from root user
+
+---
+ - EC2:
+     key_name:/home/pykid/Downloads/north_virginia.pem
+     instance_type='t2.micro'
+     image=ami-098bb5d
+     wait= yes
+     group=launch-wizard-1
+     count=1
+  #   vpc_subnet_id: default
+   #  assign_public_ip: yes 
